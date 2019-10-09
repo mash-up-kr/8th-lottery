@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+    body,h1 {font-family: "Raleway", sans-serif}
+    body, html {height: 100%}
+    .bgimg {
+        background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
+        min-height: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .btn-gradient {
+        text-decoration: none;
+        color: white;
+        padding: 10px 30px;
+        display: inline-block;
+        position: relative;
+        border: 1px solid rgba(0,0,0,0.21);
+        border-bottom: 4px solid rgba(0,0,0,0.21);
+        border-radius: 4px;
+        text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+    }
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+    <div class="w3-display-middle">
+        <h1 class="w3-jumbo w3-animate-top" th:text="${crew.name}"></h1>
+        <hr class="w3-border-grey" style="margin:auto;width:40%">
+        <h1 class="w3-x-large w3-center" th:text="${crew.grade}"></h1>
+        <h1 class="w3-x-large w3-center" th:text="${crew.team}"></h1>
+        <a class="btn-gradient" href="/"></a>
+    </div>
+</div>
+
+</body>
+</html>
